@@ -1,0 +1,7 @@
+{
+  "speakers": {"NARRATOR": "Sita", "GUEST": "Amit"},
+  "segments": [
+    {"start": 0.2, "end": 1.2, "text": "Hello",   "assamese": "নমস্কাৰ", "speaker_id": "NARRATOR"},
+    {"start": 1.5, "end": 2.5, "text": "Welcome", "assamese": "স্বাগতম",  "speaker_id": "GUEST"}
+  ]
+}

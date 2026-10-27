@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eskillveda-assamese-video-agent"
+version = "0.1.0"
+description = "Review-first Assamese translation, voiceover and video dubbing"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.1,<2"]
+tts = ["torch>=2.4", "transformers>=4.46,<5", "soundfile>=0.12", "parler-tts @ git+https://github.com/huggingface/parler-tts.git"]
+separation = ["demucs>=4.0,<5", "torch>=2.4"]
+diarization = ["pyannote.audio>=3.1,<4", "torch>=2.4"]
+
+[project.scripts]
+assamese-agent = "assamese_agent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["assamese_agent*"]
